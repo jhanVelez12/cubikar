@@ -6,7 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+    children: [
+      {
+        path: 'clientes',
+        loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule)
+      },
+    ]
+  },
+
 ];
 
 @NgModule({
