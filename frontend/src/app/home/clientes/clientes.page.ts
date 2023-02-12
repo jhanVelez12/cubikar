@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ColumnMode } from 'projects/swimlane/ngx-datatable/src/public-api';
+
+//Services
+import { ClientesService } from '../_services/clientes.service';
 
 @Component({
   selector: 'app-clientes',
@@ -17,17 +19,22 @@ export class ClientesPage implements OnInit {
 
   columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company', sortable: false }];
 
-  ColumnMode = ColumnMode;
+  //ColumnMode = ColumnMode;
 
-  constructor() {
+  constructor(
+    private service: ClientesService
+  ) {
+    /*
     this.fetch((data: any) => {
       this.rows = data;
       setTimeout(() => {
         this.loadingIndicator = false;
       }, 1500);
     });
+    */
   }
 
+  /*
   fetch(cb: any) {
     const req = new XMLHttpRequest();
     req.open('GET', `assets/data/company.json`);
@@ -38,5 +45,6 @@ export class ClientesPage implements OnInit {
 
     req.send();
   }
+  */
 
 }
