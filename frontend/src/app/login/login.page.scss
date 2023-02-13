@@ -2,6 +2,9 @@
   max-width: 200px;
   display: inline-block;
 }
+.fondo {
+  background-color: black;
+}
 
 .logo-container {
   text-align: center;
@@ -12,6 +15,7 @@
   padding: 0;
   height: 500%;
   color: var(--ion-color-dark-tint);
+  background-color: black;
   //background-image: url('../../assets/icon/Captura.png');
 }
 .barra-lateral {
