@@ -1,51 +1,53 @@
 <ion-header class="bar-balanced">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" color>
+    <img src="../../assets/icon/Logo_Cbk_4.png" width="50" height="50"/>
+    <div class="container-fluid">
+      <a class="navbar-brand">Proyectos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Clientes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="home/clientes">Lista de clientes</a></li>
+              <li><a class="dropdown-item" href="home/crear-cliente">Crear Clientes </a></li>
+              <li><a class="dropdown-item" href="contactos">Contactos</a></li>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary" color>
-  <img src="../../assets/icon/Logo_Cbk_4.png" width="50" height="50"/>
-  <div class="container-fluid">
-    <a class="navbar-brand">Proyectos</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Clientes
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/frontend/src/app/home/clientes/clientes.page.html">Lista de clientes</a></li>
-            <li><a class="dropdown-item" href="/frontend/src/app/home/clientes/crear-cliente/crear-cliente.page.html">Crear Clientes </a></li>
-            <li><a class="dropdown-item" href="#">Contactos</a></li>
-
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Oportunidad Comercial </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Oferta Comercial
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Forma de pago </a></li>
-            <li><a class="dropdown-item" href="#">PLIEGO DE CONDICIONES, INVITACION Y DOCUMENTACON ANEXA AL PROCESO</a></li>
-            <li><a class="dropdown-item" href="#">POLIZA DE SERIEDAD</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Informes</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscae</button>
-      </form>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Oportunidad Comercial </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Oferta Comercial
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Forma de pago </a></li>
+              <li><a class="dropdown-item" href="#">PLIEGO DE CONDICIONES, INVITACION Y DOCUMENTACON ANEXA AL PROCESO</a></li>
+              <li><a class="dropdown-item" href="#">POLIZA DE SERIEDAD</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Informes</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
     </div>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
   </div>
-</nav>
 </ion-header>
