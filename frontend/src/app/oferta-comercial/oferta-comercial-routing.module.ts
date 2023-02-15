@@ -11,6 +11,14 @@ const routes: Routes = [
   {
     path: 'ofertas',
     loadChildren: () => import('./ofertas/ofertas.module').then( m => m.OfertasPageModule)
+  },
+  {
+    path: 'cotizaciones',
+    loadChildren: () => import('./cotizaciones/cotizaciones.module').then( m => m.CotizacionesPageModule)
+  },
+  {
+    path: 'crear-cotizacion',
+    loadChildren: () => import('./crear-cotizacion/crear-cotizacion.module').then( m => m.CrearCotizacionPageModule)
   }
 ];
 
