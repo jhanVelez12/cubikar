@@ -20,7 +20,23 @@ const routes: Routes = [
         loadChildren: () => import('./home/clientes/crear-cliente/crear-cliente.module').then(m=> m.CrearClientePageModule)
       }
     ]
+  },
+  {
+    path: 'oferta-comercial',
+    children: [
+      {
+        path:"",
+        loadChildren: () => import('./oferta-comercial/oferta-comercial.module').then( m => m.OfertaComercialPageModule)
+      },
+      {
+        path: 'ofertas',
+        loadChildren: () => import('./oferta-comercial/ofertas/ofertas.module').then( m => m.OfertasPageModule)
+      }
+
+    ]
+
   }
+
 
 ];
 
