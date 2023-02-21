@@ -5,29 +5,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthModule = void 0;
-const common_1 = require("@nestjs/common");
-const users_module_1 = require("../users/users.module");
-const auth_service_1 = require("./auth.service");
-const passport_1 = require("@nestjs/passport");
-const jwt_1 = require("@nestjs/jwt");
-const auth_controller_1 = require("./auth.controller");
-const users_service_1 = require("../users/users.service");
-const mongoose_1 = require("@nestjs/mongoose");
-const users_model_1 = require("../users/users.model");
-const local_strategy_1 = require("./strategies/local.strategy");
-let AuthModule = class AuthModule {
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-AuthModule = __decorate([
-    (0, common_1.Module)({
-        imports: [users_module_1.UsersModule, passport_1.PassportModule, jwt_1.JwtModule.register({
-                secret: 'secretKey',
-                signOptions: { expiresIn: '60s' },
-            }), mongoose_1.MongooseModule.forFeature([{ name: "user", schema: users_model_1.UserSchema }])],
-        providers: [auth_service_1.AuthService, users_service_1.UsersService, local_strategy_1.LocalStrategy],
-        controllers: [auth_controller_1.AuthController],
-    })
-], AuthModule);
-exports.AuthModule = AuthModule;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalStrategy = void 0;
+const passport_local_1 = require("passport-local");
+const passport_1 = require("@nestjs/passport");
+const common_1 = require("@nestjs/common");
+const auth_service_1 = require("./auth.service");
+let LocalStrategy = class LocalStrategy extends (0, passport_1.PassportStrategy)(passport_local_1.Strategy) {
+    constructor(authService) {
+        super();
+        this.authService = authService;
+    }
+    async validate(username, password) {
+        const user = await this.authService.validateUser(username, password);
+        if (!user) {
+            throw new common_1.UnauthorizedException();
+        }
+        return user;
+    }
+};
+LocalStrategy = __decorate([
+    (0, common_1.Injectable)(),
+    __metadata("design:paramtypes", [auth_service_1.AuthService])
+], LocalStrategy);
+exports.LocalStrategy = LocalStrategy;
 //# sourceMappingURL=local.auth.js.map
