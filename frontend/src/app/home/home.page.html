@@ -1,7 +1,10 @@
-<ion-header class="bar-balanced">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-    <img src="../../assets/icon/Logo_Cbk_4.png" width="50" height="50"/>
+<ion-header class="bar-balanced" >
+  
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary menuStyles">
     <div class="container-fluid">
+      <img src="../../assets/icon/Logo_Cbk_4.png" width="50" height="50"/>
+
       <a class="navbar-brand">Proyectos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,9 +19,10 @@
               <li><a class="dropdown-item" href="home/crear-cliente"> <ion-icon name="person-add-sharp"></ion-icon>Crear Clientes</a></li>
               <li><a class="dropdown-item" href="home/clientes"><ion-icon name="person-sharp"></ion-icon>Clientes </a></li>
 
-
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <!--
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              -->
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -26,11 +30,11 @@
               Oportunidad Comercial
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="oferta-comercial"><ion-icon name="bookmark-sharp"></ion-icon> Nueva Oferta comercial </a></li>
-              <li><a class="dropdown-item" href="oferta-comercial/ofertas"><ion-icon name="bookmarks-sharp"></ion-icon>Ofertas</a></li>
+              <li><a class="dropdown-item" href="home/oferta-comercial"><ion-icon name="bookmark-sharp"></ion-icon> Nueva Oferta comercial </a></li>
+              <li><a class="dropdown-item" href="home/oferta-comercial/ofertas"><ion-icon name="bookmarks-sharp"></ion-icon>Ofertas</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="oferta-comercial/cotizaciones"><ion-icon name="logo-usd"></ion-icon>Cotizaciones</a></li>
-              <li><a class="dropdown-item" href="oferta-comercial/crear-cotizacion"><ion-icon name="logo-usd"></ion-icon>Nueva cotización</a></li>
+              <li><a class="dropdown-item" href="home/oferta-comercial/cotizaciones"><ion-icon name="logo-usd"></ion-icon>Cotizaciones</a></li>
+              <li><a class="dropdown-item" href="home/oferta-comercial/crear-cotizacion"><ion-icon name="logo-usd"></ion-icon>Nueva cotización</a></li>
 
             </ul>
           </li>
@@ -43,8 +47,10 @@
               <li><a class="dropdown-item" href="home/crear-cliente"><ion-icon name="lock-closed-sharp"></ion-icon>Oportunidades cerradas </a></li>
 
 
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <!--
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              -->
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -55,21 +61,24 @@
               <li><a class="dropdown-item" href="home/clientes">Informe general</a></li>
               <li><a class="dropdown-item" href="home/crear-cliente">Informe por proyecto </a></li>
 
-
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <!--
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              -->
             </ul>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
+          <button class="btn btn-dark" type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
         </form>
       </div>
     </div>
   </nav>
+  
   <div>
     <router-outlet></router-outlet>
   </div>
-
 </ion-header>
