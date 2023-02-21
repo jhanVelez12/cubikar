@@ -1,5 +1,5 @@
 <ion-header class="bar-balanced">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" color>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" >
     <img src="../../assets/icon/Logo_Cbk_4.png" width="50" height="50"/>
     <div class="container-fluid">
       <a class="navbar-brand">Proyectos</a>
@@ -9,12 +9,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="people-sharp"></ion-icon>
             Clientes
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="home/crear-cliente">Crear Clientes</a></li>
-              <li><a class="dropdown-item" href="home/clientes">Clientes </a></li>
+              <li><a class="dropdown-item" href="home/crear-cliente"> <ion-icon name="person-add-sharp"></ion-icon>Crear Clientes</a></li>
+              <li><a class="dropdown-item" href="home/clientes"><ion-icon name="person-sharp"></ion-icon>Clientes </a></li>
 
 
               <li><hr class="dropdown-divider"></li>
@@ -22,25 +22,25 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="pricetags-sharp"></ion-icon>
               Oportunidad Comercial
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="oferta-comercial"> Nueva Oferta comercial </a></li>
-              <li><a class="dropdown-item" href="oferta-comercial/ofertas">Ofertas</a></li>
+              <li><a class="dropdown-item" href="oferta-comercial"><ion-icon name="bookmark-sharp"></ion-icon> Nueva Oferta comercial </a></li>
+              <li><a class="dropdown-item" href="oferta-comercial/ofertas"><ion-icon name="bookmarks-sharp"></ion-icon>Ofertas</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="oferta-comercial/cotizaciones">Cotizaciones</a></li>
-              <li><a class="dropdown-item" href="oferta-comercial/crear-cotizacion">Nueva cotización</a></li>
+              <li><a class="dropdown-item" href="oferta-comercial/cotizaciones"><ion-icon name="logo-usd"></ion-icon>Cotizaciones</a></li>
+              <li><a class="dropdown-item" href="oferta-comercial/crear-cotizacion"><ion-icon name="logo-usd"></ion-icon>Nueva cotización</a></li>
 
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="stats-chart-sharp"></ion-icon>
             Indicadores
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="home/clientes">Oportunidades abiertas</a></li>
-              <li><a class="dropdown-item" href="home/crear-cliente">Oportunidades cerradas </a></li>
+              <li><a class="dropdown-item" href="home/clientes"> <ion-icon name="lock-open-sharp"></ion-icon>Oportunidades abiertas</a></li>
+              <li><a class="dropdown-item" href="home/crear-cliente"><ion-icon name="lock-closed-sharp"></ion-icon>Oportunidades cerradas </a></li>
 
 
               <li><hr class="dropdown-divider"></li>
@@ -48,7 +48,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="documents-sharp"></ion-icon>
             Informes
             </a>
             <ul class="dropdown-menu">
@@ -71,4 +71,5 @@
   <div>
     <router-outlet></router-outlet>
   </div>
+
 </ion-header>
